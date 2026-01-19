@@ -92,7 +92,7 @@ Refer to `jenkins-job-screens` screenshots for job-making/chaining
 - Add webhook
 
 
-Adding private key to Jenkins:
+**Adding private key to Jenkins**:
 Refer to screenshots
 - Make new job and put in GitHub repo under GitHub project URL
     - NOTE: put `/` after the URL - i.e. `https://github.com/username/repo-name/`
