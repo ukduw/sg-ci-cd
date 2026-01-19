@@ -35,7 +35,7 @@ CI/CD key advantages:
 ## Jenkins
 **Open-source automation server/software** with a **very broad use case** (beyond just CI/CD) and a lot of **customizability (via plugins)** and **scalability**
 - Also used in Data and Machine Learning
-- Jenkins runs on a Control Server
+- Jenkins runs on a Control Node on the server
 - It then has Agent Nodes run tasks for it
 
 Jenkins can also run on all OS's
@@ -59,4 +59,9 @@ Typical pipeline is made up of **3 Jenkins jobs**:
 2. **Test + Merge if tests pass (CI)**
 3. **Deploy to AWS (CD)** (or CDE - Deploy to Environment)
     - No manual approval
+
+
+### Use
+
+
 
