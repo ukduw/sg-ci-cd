@@ -33,6 +33,21 @@ CI/CD key advantages:
 
 
 ## Jenkins
-placeholder
-- placeholder
+**Open-source automation server/software** with a **very broad use case** (beyond just CI/CD) and a lot of **customizability (via plugins)** and **scalability**
+- Also used in Data and Machine Learning
+- Jenkins runs on a Control Server
+- It then has Agent Nodes run tasks for it
+
+Jenkins can also run on all OS's
+- But this broadness also means it is **more complex than alternatives**
+- Becomes **more difficult to maintain at scale**
+
+**Code** from: **source code management (SCM)** (1) / version control   
+**Jenkins**: CI/CD
+- **Build** (2)
+- **Test** (3)
+- **Package** (4)
+- **Deploy** (5)
+- **Monitor** (6)
+
 
