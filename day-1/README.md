@@ -93,9 +93,18 @@ Refer to `jenkins-job-screens` screenshots for job-making/chaining
 
 
 Adding private key to Jenkins:
-- 
-- 
-- 
-- 
+Refer to screenshots
+- Make new job and put in GitHub repo under GitHub project URL
+    - NOTE: put `/` after the URL - i.e. `https://github.com/username/repo-name/`
+- Check Git under Source Code Management
+- Input the repo's SSH URL
+- Select SSH Username with private key, global scope, input ID/Description/Username
+- Private key, enter directly:
+- `cat name-of-key-no-pub` again and copy-paste the contents, including the ----- START ----- and ----- END -----
+- Remember to change `*/master` branch to `*/dev`
+- Under Build Environment, check Provide Node & npm bin/ folder to PATH (plugin)
+- Change NodeJS Installation to version 20
+- Build triggers: GitHub hook trigger for GITScm polling
+- Add cd, npm install and npm test commands to Execute Shell
 
 
