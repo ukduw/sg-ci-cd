@@ -51,3 +51,11 @@ Jenkins can also run on all OS's
 - **Monitor** (6)
 
 
+### Pipeline
+Typical pipeline is made up of **3 Jenkins jobs**:
+1. **Source Code Management (SCM) + Build (CI)**
+    - Getting Jenkins to go to the right (private) repo, build that code...
+2. **Test + Merge if tests pass (CI)**
+3. **Deploy to AWS (CD)** (or CDE - Deploy to Environment)
+    - No manual approval
+
