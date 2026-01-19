@@ -47,7 +47,7 @@ Jenkins can also run on all OS's
 - **Build** (2)
 - **Test** (3)
 - **Package** (4)
-- **Deploy** (5)
+- **Deploy/Deliver** (5)
 - **Monitor** (6)
 
 
