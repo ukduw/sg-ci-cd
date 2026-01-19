@@ -62,6 +62,40 @@ Typical pipeline is made up of **3 Jenkins jobs**:
 
 
 ### Use
+Refer to `jenkins-job-screens` screenshots for job-making/chaining
 
+
+### SSH key pairs for GitHub -> Jenkins and webhook
+**SSH key pair local generation**:   
+`ssh-keygen -t rsa -b 4096 -C "name@email.com`
+- **RSA encryption** (-t to specify type)
+- **4096 bits** (-b to specify key length)
+- -C ("comment") flag to **add email**
+
+**Adding public key to GitHub repo**:
+- Enter filename and passphrase (**empty** for Jenkins, since it cannot input passwords)   
+- Go to **Settings > Deploy keys** tab in relevant **repo**   
+- **Add deploy key**
+- Run `cat name-of-key.pub` and copy-paste the contents into the Key field on GitHub (careful with whitespace)
+- **Allow write access**
+
+**Webhook**:
+- **Webhook tab** on left
+- Add webhook
+- Fill in Jenkins payload URL (can be sent to multiple servers) with `github-webhook/` on the end
+    - i.e. `http://server-ip-address:8080/github-webhook/`
+- Content type: `application/x-www-form-urlencoded`
+- Secret: [**blank**]
+- SSL verification ideally enabled, but disable for basic testing
+- **Just the push event** should **trigger** this webhook
+- Active
+- Add webhook
+
+
+Adding private key to Jenkins:
+- 
+- 
+- 
+- 
 
 
