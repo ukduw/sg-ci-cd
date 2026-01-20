@@ -108,3 +108,7 @@ Refer to screenshots
 - Add cd, npm install and npm test commands to Execute Shell
 
 
+### GitHub webhook, Jenkins CI pipeline (multi-branch)
+![GitHub-Jenkins CI pipeline diagram for multi-branch repo](diagrams/multi-branch-gh-jenkins-ci.gif)
+
+
