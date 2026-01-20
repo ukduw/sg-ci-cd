@@ -94,31 +94,33 @@ Refer to `jenkins-job-screens` screenshots for job-making/chaining
 
 **Adding private key to Jenkins**:
 Refer to screenshots
-- Make new job and put in GitHub repo under GitHub project URL
-    - NOTE: put `/` after the URL - i.e. `https://github.com/username/repo-name/`
+- **Make new job** and put in GitHub repo under GitHub project URL
+    - NOTE: put `/` **after the URL** - i.e. `https://github.com/username/repo-name/`
 - Check Git under Source Code Management
 - Input the repo's SSH URL
 - Select SSH Username with private key, global scope, input ID/Description/Username
 - Private key, enter directly:
-- `cat name-of-key-no-pub` again and copy-paste the contents, including the ----- START ----- and ----- END -----
-- Remember to change `*/master` branch to `*/dev`
+- `cat name-of-key-no-pub` again and copy-paste the contents, including the `----- START -----` and `----- END -----`
+- Remember to **change `*/master` branch to `*/dev`**
 - Under Build Environment, check Provide Node & npm bin/ folder to PATH (plugin)
 - Change NodeJS Installation to version 20
 - Build triggers: GitHub hook trigger for GITScm polling
-- Add cd, npm install and npm test commands to Execute Shell
+- **Add cd, npm install and npm test commands to Execute Shell**
 
 
 ### Chaining dev branch push trigger to second job
 Refer to screenshots   
-Second Jenkins job: **merge changes to main after successful first job (tests)**:   
-- Select "Copy from" and use the settings from job 1
-- Note: keep */dev as the branch
+**Second Jenkins job: merge changes to main after successful first job (tests)**:   
+- Select "Copy from" and **use the settings from job 1**
+- **Note: keep `*/dev` as the branch**
     - This job needs to clone dev, checkout to main, and merge from there
 - Change Build Trigger from GitHub webhook to Build after other projects are built (select first job)
 - Under Post-build Actions, check Git Publisher
     - Push Only If Build Succeeds
     - Merge Results
-    - Add Branch: Branch to push = main, Target remote name = origin
+    - Add Branch:
+        - Branch to push: main
+        - Target remote name: origin
 
 
 
