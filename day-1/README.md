@@ -108,6 +108,12 @@ Refer to screenshots
 - Add cd, npm install and npm test commands to Execute Shell
 
 
+### Chaining dev branch push trigger to second job
+Second Jenkins job: **merge changes to main after successful first job (tests)**   
+
+
+
+
 ### GitHub webhook, Jenkins CI pipeline (multi-branch)
 ![GitHub-Jenkins CI pipeline diagram for multi-branch repo](diagrams/multi-branch-gh-jenkins-ci.gif)
 
