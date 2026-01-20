@@ -66,7 +66,7 @@ Refer to `jenkins-job-screens` screenshots for job-making/chaining
 
 ### GitHub-Jenkins CI architecture
 ![GitHub, Jenkins CI architecture diagram](diagrams/jenkins-ci-architecture.png)   
-Developer pushes to `dev` branch, GitHub webhook triggers Jenkins job on agent node, running automated tests. If tests pass and job completes successfully, second job runs and merges the `dev` branch to the `main` branch automatically.
+Developer pushes to `dev` branch and GitHub webhook triggers Jenkins job on agent node, running automated tests. If tests pass and job completes successfully, second job runs and merges the `dev` branch to the `main` branch automatically.
 
 
 ### SSH key pairs for GitHub -> Jenkins and webhook
