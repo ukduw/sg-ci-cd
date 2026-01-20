@@ -109,8 +109,16 @@ Refer to screenshots
 
 
 ### Chaining dev branch push trigger to second job
-Second Jenkins job: **merge changes to main after successful first job (tests)**   
-
+Refer to screenshots   
+Second Jenkins job: **merge changes to main after successful first job (tests)**:   
+- Select "Copy from" and use the settings from job 1
+- Note: keep */dev as the branch
+    - This job needs to clone dev, checkout to main, and merge from there
+- Change Build Trigger from GitHub webhook to Build after other projects are built (select first job)
+- Under Post-build Actions, check Git Publisher
+    - Push Only If Build Succeeds
+    - Merge Results
+    - Add Branch: Branch to push = main, Target remote name = origin
 
 
 
