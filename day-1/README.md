@@ -42,7 +42,7 @@ Jenkins can also run on all OS's
 - But this broadness also means it is **more complex than alternatives**
 - Becomes **more difficult to maintain at scale**
 
-**Code** from: **source code management (SCM)** (1) / version control   
+**Code** from: **source code management (SCM)** / version control (1)   
 **Jenkins**: CI/CD
 - **Build** (2)
 - **Test** (3)
