@@ -10,8 +10,33 @@ Developer pushes to `dev` branch and GitHub webhook triggers Jenkins job on agen
 
 
 ### Jenkins SSH into target AWS EC2 instance
-**step 1**
-- placeholder
+Refer to screenshots   
+**Make new Jenkins job**
+- Select **Copy from** and use the settings from job2
+- Update the description
+- **Retain all GitHub settings** - needs to clone down code from same repo
+- **Update Build Triggers** to be on successful **job2 completion**
+- Under **Post-build Actions**, **remove Git Publisher**
+- **Build Environment, enable SSH Agent** (plugin)
+    - **Add**
+    - Kind: **SSH Username with private key**
+    - Global scope
+    - Fill in ID, Description and Username with descriptive name...
+    - **Enter directly**: `cat aws-key-pair-name.pem` in terminal; **copy-paste this into field (include the dashes)**
+    - **No passphrase**
+- **Build Steps, Execute shell**:
+```
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu
+
+ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
+   ls
+   cd app
+   ls
+   npm install
+   pm2 kill
+   pm2 start app.js
+EOF
+```
 
 **step 2**
 - placeholder
