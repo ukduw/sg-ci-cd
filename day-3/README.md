@@ -30,7 +30,7 @@ rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@{INSTANCE_PUBLIC_IP_H
 
 ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
    ls
-   cd app
+   cd nodejs20-se-test-app-2025/app
    ls
    npm install
    pm2 kill
