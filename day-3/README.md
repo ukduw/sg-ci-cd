@@ -9,7 +9,7 @@
 Developer pushes to `dev` branch and GitHub webhook triggers Jenkins job on agent node, running automated tests **(1)**. If tests pass and job completes successfully, second job runs and merges the `dev` branch to the `main` branch automatically **(2)**. On completion of the second job, the third job is triggered and this has an agent node deploy the updated code to an existing AWS EC2 instance **(3)** - this is via SSH into the target AWS instance, copying over the updated code **(delivery)**, then running it **(deployment)**.
 
 
-### Jenkins SSH into target AWS EC2 instance
+### Jenkins SSH into target AWS EC2 instance, deploy changes
 Refer to screenshots   
 **Make new Jenkins job**
 - Select **Copy from** and use the settings from job2
@@ -37,10 +37,4 @@ ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
    pm2 start app.js
 EOF
 ```
-
-**step 2**
-- placeholder
-
-**step 3**
-- placeholder
 
