@@ -26,7 +26,7 @@ Refer to screenshots
     - **No passphrase**
 - **Build Steps, Execute shell**:
 ```
-rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu/se-test-app/nodejs20-se-test-app-2025/app
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu/
 
 ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
    ls
@@ -36,6 +36,10 @@ ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
    pm2 kill
    pm2 start app.js
 EOF
+```
+Overwrite app data in existing directory:   
+```
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu/se-test-app/nodejs20-se-test-app-2025/app
 ```
 
 
