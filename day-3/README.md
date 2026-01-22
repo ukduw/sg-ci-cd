@@ -55,5 +55,6 @@ rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ub
     - Even with `pm2 kill`, the new process will still error out
     - `port 3000` already listened on, `--update-env` or other flags/reset commands don't fix this
 - Can possibly be fixed with AMI/user data changes...
+- Or `chmod` permissions for the entire app directory, then make a new AMI of that instance
 
 
