@@ -26,7 +26,7 @@ Refer to screenshots
     - **No passphrase**
 - **Build Steps, Execute shell**:
 ```
-rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu/
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ubuntu@{INSTANCE_PUBLIC_IP_HERE}:/home/ubuntu/se-test-app/nodejs20-se-test-app-2025/app
 
 ssh -o "StrictHostKeyChecking=no" ubuntu@{INSTANCE_PUBLIC_IP_HERE} <<EOF
    ls
