@@ -48,7 +48,7 @@ rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ub
     - `pm2` runs process, `port 3000` already being listened on - subsequent run will error out
 - If not, there's no `npm install`, `pm2 start app.js`
     - No webpage displayed before first CI/CD run
-- Jenkins cannot overwrite existing app data (does not have the permissions) - job3 will fail
+- Jenkins cannot overwrite existing app data (Permission Denied) - job3 will fail
 - Jenkins using `sudo rsync ...` to get around permissions causes SSH disconnection
 - Jenkins writing into new directory leads to first problem
     - Even with `pm2 kill`, the new process will still error out
