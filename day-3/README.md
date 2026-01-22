@@ -46,6 +46,7 @@ rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ub
 ### Problems...
 - If app instance runs with user data script...
     - `pm2` runs process, `port 3000` already being listened on - subsequent run will error out
+    - even with `pm2 kill`
 - If not, there's no `npm install`, `pm2 start app.js`
     - No webpage displayed before first CI/CD run
 - Jenkins cannot overwrite existing app data (Permission Denied) - job3 will fail
@@ -53,5 +54,6 @@ rsync -avz -e "ssh -o StrictHostKeyChecking=no" nodejs20-se-test-app-2025/app ub
 - Jenkins writing into new directory leads to first problem
     - Even with `pm2 kill`, the new process will still error out
     - `port 3000` already listened on, `--update-env` or other flags/reset commands don't fix this
+- Can possibly be fixed with AMI/user data changes...
 
 
