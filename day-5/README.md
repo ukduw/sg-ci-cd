@@ -38,6 +38,18 @@
 - After installation, select **Back to Dashboard**
 
 ### 3.2 Select **Configure a cloud** (if there are no existing nodes/clouds)
+- ( **If nodes/clouds have already been set up**, select **Manage Jenkins** on the left -> **Manage Nodes and Clouds** -> **Clouds** )
+- Select **Add a new cloud**, **Amazon EC2**
+    - Click **Add** under **Amazon EC2 Credentials**
+        - Kind: **AWS Credentials**
+        - Fill in **Access Key ID** and **Secret Access Key**
+    - Region: e.g. **eu-west-1**
+    - Click **Add** under **EC2 Key Pair's Private Key**
+        - Kind: **SSH Username with private key**
+        - Username: **ec2-user**
+        - Select **Enter Directly** under **Private Key**, cat and copy-paste (including the `-----BEGIN RSA PRIVATE KEY-----` and `-----END RSA PRIVATE KEY-----`) the key, then **Add**
+    - Click **Test Connection**
+    - If `Success`, select **Save**
 
 
 
