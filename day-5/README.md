@@ -27,7 +27,7 @@
     - `sudo systemctl status jenkins` to check state of Jenkins service
 - `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` initial admin password to unlock Jenkins in next step
 
-### 3.1 Connect to `http://SERVER_PUBLIC_IP:8080`
+### 3.1 Connect to `http://INSTANCE_PUBLIC_IP:8080`
 - **Input the initial admin password**
 - Installation script will redirect to **Customize Jenkins page**
 - **Click install suggested plugins**
