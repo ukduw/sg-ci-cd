@@ -23,6 +23,7 @@
 - `sudo systemctl enable jenkins` enable Jenkins service to start at boot
 - `sudo systemctl start jenkins` start Jenkins as a service
     - `sudo systemctl status jenkins` to check state of Jenkins service
+- `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
 ### 3. Connect to `http://SERVER_PUBLIC_IP:8080`
 - 
