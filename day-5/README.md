@@ -14,10 +14,15 @@
         - Jenkins runs on port 8080
     - **Ubuntu Server 24 AMI**
 - **SSH into instance**
-- 
-- 
-- 
-- 
+    - `sudo apt update`
+    - `sudo wget -O /etc/yum.repos.d/jenkins.repo \ https://pkg.jenkins.io/rpm-stable/jenkins.repo`
+    - `sudo rpm --import https://pkg.jenkins.io/rpm-stable/jenkins.io-2026.key`
+    - `sudo apt upgrade -y`
+    - `sudo apt install java-21-amazon-corretto -y` OpenJDK distro (Java is prerequisite for Jenkins)
+    - `sudo apt install jenkins -y`
+    - `sudo systemctl enable jenkins` enable Jenkins service to start at boot
+    - `sudo systemctl start jenkins` start Jenkins as a service
+        - `sudo systemctl status jenkins` to check state of Jenkins service
 - 
 - 
 - 
