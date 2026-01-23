@@ -25,10 +25,19 @@
     - `sudo systemctl status jenkins` to check state of Jenkins service
 - `sudo cat /var/lib/jenkins/secrets/initialAdminPassword` initial admin password to unlock Jenkins in next step
 
-### 3. Connect to `http://SERVER_PUBLIC_IP:8080`
-- Input the initial admin password
-- 
-- 
+### 3.1 Connect to `http://SERVER_PUBLIC_IP:8080`
+- **Input the initial admin password**
+- Installation script will redirect to **Customize Jenkins page**
+- **Click install suggested plugins**
+- Redirect to **Create First Admin User page**
+    - Enter admin user info... (username, password, name, email)
+- On left, select **Manage Jenkins**, **Manage Plugins**
+    - Select the **Available tab**, enter **Amazon EC2 plugin** at top right
+    - Select the **checkbox next to Amazon EC2 plugin**
+    - Select **Install without restart**
+- After installation, select **Back to Dashboard**
+
+### 3.2 Select **Configure a cloud** (if there are no existing nodes/clouds)
 
 
 
