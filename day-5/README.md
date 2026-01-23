@@ -7,10 +7,12 @@
 
 ### 1. Launch EC2 instance
 - **Key pair**
+- **Default VPC, subnet**
 - **Security group: ports 80, 22, 8080 open**
     - Allow inbound HTTP access from anywhere
     - Allow inbound SSH traffic from anywhere (preferably only from specific PC's public IP)
     - Jenkins runs on port 8080
+- **t3micro/small**
 - **Ubuntu Server 24 AMI**
 
 ### 2. SSH into instance
